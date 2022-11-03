@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <script type="text/javascript">
+    function savename(n) {
+      var now = new Date();
+      now.setTime( now.getTime() + 365*24*60*60*1000 );
+      document.cookie = "name=" + n + "; expires=" + now.toGMTString();
+      document.location.href = "game.html";
+    }
+    function getname() {
+      var prefix = 'name=';
+      var c = document.cookie;
+
+      var cookieStartIndex = c.indexOf(prefix);
+      if (cookieStartIndex == -1) return "";
+      var cookieEndIndex = c.indexOf(";", cookieStartIndex + prefix.length);
+      if (cookieEndIndex == -1) cookieEndIndex = c.length;
+
+      return unescape(c.substring(cookieStartIndex + prefix.length, cookieEndIndex));
+    }
+  </script>
+  <link rel="stylesheet" media="all" href="styles.css" />
+  <title>WEBoggle</title>
+</head>
+<body>
+
+<h1><img src="boggle.png" alt="WEBoggle Logo" title="WEBoggle"></h1>
+
+<div id="body">
+
+  <form id="welcome" onsubmit="savename(this.name.value); return false;" action="javascript: void 0">
+    <label for="name">Your name: </label>
+    <input type="text" id="name" name="name">
+    <input type="submit" value="Play Now!" id="submit">
+  </form>
+
+  <script type="text/javascript">
+    document.forms[0].name.value = getname();
+    document.forms[0].name.focus();
+  </script>
+  <noscript>
+    WEBoggle requires JavaScript.  More details <a href="about.html">here</a>.
+  </noscript>
+</div>
+
+<p class="news"><b>2004-04-02</b> - Thanks for those of you who have helped bug test.  WEBoggle is now upgraded!  Yippee!  <small>(<a href="CHANGELOG">Changelog</a>, <a href="TODO">To-do list</a>)</small>  <a href="mailto:boggle@plutor.org">Let me know</a> if you see anything fishy.</p>
+
+<p class="newsold"><b>2004-03-20</b> - <a href="http://www.milbertus.com/cmdrdata/">William Schott</a> has become the first person to help <a href="https://www.paypal.com/xclick/business=log@plutor.org&item_name=WEBoggle%20Donation&no_note=1&tax=0&currency_code=USD">support</a> WEBoggle.  Join him, and keep this game up and ad free (well, besides this appeal)!</p>
+
+<p class="newsold"><b>2004-03-20</b> - I changed the dictionary file today.  I got some complaints about words missing, especially computer jargon and English slang.  It's not yet perfect, but it should be an improvement.  <!--I took the 2of12inf file from <a href="http://wordlist.sourceforge.net/12dicts-readme.html">12dicts</a> and combined it with the wordlist from <a href="http://aosda.net/docs/jargon/">The Jargon File</a>, removed 2of12inf's % signs, all words shorter than 3 letters, all jargon with non-letters, and all acronyms.  There's still a good amount of missing words, most prominently "zen".  I'm working on it..--><br>There will also be a "rules" file shortly.</p>
+
+<p class="aboutlink">
+  <a href="about.html">About WEBoggle</a> |
+  <a href="rules.html">How to Play</a> |
+  <a href="https://www.paypal.com/xclick/business=log@plutor.org&item_name=WEBoggle%20Donation&no_note=1&tax=0&currency_code=USD">Support</a> |
+  <a href="mailto:boggle@plutor.org">Contact</a>
+</p>
+
+</body>
+</html>

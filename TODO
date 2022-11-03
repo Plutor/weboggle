@@ -1,0 +1,14 @@
+* Move board numbers up, convert old boards, migrate them in, rerun report (whee)
+* Backspace key in IE
+
+* Better graphs for WEBoggle report
+* Filter missed words server side?
+* No blinking/hammering server when broken (detect HTTP errors)
+* No name cookie should redirect to name page
+* Get list-in-progress on reload (prevent data loss if you mistakenly hit F5)
+* "-1 seconds to next game"
+
+Long term:
+* Path algorithm is slow and ugly
+* Unique Google-like user_ids for anonymous stats tracking?
+

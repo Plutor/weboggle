@@ -1,0 +1,308 @@
+body {
+  margin: 10px;
+  text-align: center;
+}
+h1 {
+  font: bold 140% Georgia,serif;
+  text-align: center;
+  margin: 5px 0;
+  padding: 0;
+}
+#body {
+  margin: 0 auto;
+  width: 500px;
+}
+
+/*
+ * Board
+ */
+#contains_board {
+  height: 300px;
+  width: 280px;
+  text-align: center;
+}
+#board {
+  margin: 0 auto;
+  text-align: center;
+  /* border-collapse: collapse; */
+
+  width: 264px; /* 4x4 at 64px x 64px */
+  height: 264px;
+  border: solid 1px black;
+  background: #639;
+}
+#board .row {
+}
+#board .row .cell {
+  text-align: center;
+  vertical-align: middle;
+
+  width: 64px;
+  height: 64px;
+  font: bold 40px sans-serif;
+
+  background: white; /* url(cube.png); */
+  color: black;
+  border-top: solid 1px #999;
+  border-left: solid 1px #999;
+  border-bottom: solid 1px #333;
+  border-right: solid 1px #333;
+}
+#board .row .inword {
+  background: #cfc; /* url(cube-inword.png); */
+  color: black;
+}
+#board .row .cursor {
+  background: #9c9; /* url(cube-cursor.png); */
+  color: black;
+}
+#board .row .timeup {
+  background: #ccc; /* url(cube-timeup.png); */
+  color: #666;
+}
+
+/*
+ * Scores
+ */
+#contains_scores {
+  vertical-align: top;
+}
+#scores {
+  width: 225px;
+  border: solid 2px black;
+  border-collapse: collapse;
+  text-align: center;
+}
+#scores .title {
+  text-align: center;
+  border: solid 1px #777;
+  font-size: 80%;
+  font-weight: bold;
+}
+#scores .row {
+  text-align: left;
+  border: solid 1px #777;
+  font-weight: bold;
+  font-size: 80%;
+  background: #eef;
+  color: #555;
+  padding: 0 2px;
+}
+#scores .nonself {
+  font-style: italic;
+}
+#scores .top {
+  border: solid 1px #777;
+  background: #ccf;
+  color: #555;
+}
+#scores .score {
+  text-align: right;
+  font-family: monospace;
+}
+#scores .missed {
+  background: #ccc;
+  color: black;
+  text-align: left;
+  font-size: 70%;
+}
+#scores .missedword {
+  font-weight: bold;
+}
+
+/*
+ * Message
+ */
+#message {
+  padding: 5px;
+
+  text-align: left;
+  background: transparent;
+  color: black;
+
+  font-size: 80%;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/*
+ * Word form
+ */
+#contains_wordform {
+  vertical-align: middle;
+}
+#wordform {
+  margin: 0 auto;
+  text-align: center;
+}
+#wordform label {
+  font-weight: bold;
+}
+#wordform input {
+}
+
+/*
+ * Words list
+ */
+#contains_words {
+  border: solid 1px #999;
+  height: 300px;
+  vertical-align: top;
+}
+#contains_words div {
+  height: 300px;
+  overflow: auto;
+}
+#score {
+  text-align: center;
+  font-size: 90%;
+  padding: 0;
+  margin: 5px;
+}
+#words {
+  list-style: disc inside;
+  padding: 0;
+  margin: 5px;
+  text-align: left;
+}
+#words .word {
+  padding: 0 0 0 10px;
+  margin: 1px;
+}
+#words .word .reason {
+  margin: 0 0 0 4px;
+  font-style: italic;
+}
+#words .good {
+  background: #efe;
+  color: #3a3;
+}
+#words .bad {
+  background: #fee;
+  color: #a33;
+}
+
+/*
+ * Notes
+ */
+#notes {
+}
+#notes p {
+  margin: 0 5px;
+
+  font-size: 80%;
+  color: #888;
+  font-style: italic;
+  text-align: center;
+
+  border: dashed 1px #888;
+  background: #eee;
+  padding: 3px 0;
+}
+
+/*
+ * Welcome page
+ */
+#welcome {
+}
+#welcome label {
+  font-weight: bold;
+}
+
+/*
+ * About page
+ */
+body.about {
+  text-align: left;
+}
+body.about h2 {
+}
+body.about h3 {
+  font-size: 110%;
+  font-weight: bold;
+  margin: 1em 0 0 1em;
+}
+body.about p {
+  text-align: left;
+  margin: 0.5em 0 0.5em 2em;
+}
+p {
+  text-align: left;
+}
+p.aboutlink {
+  text-align: center;
+}
+
+/*
+ * News
+ */
+p.news {
+  border-top: dashed 1px #bbb;
+  font-size: 80%;
+  text-align: justify;
+  margin: 0 25%;
+  padding: 0.5em 5px;
+}
+p.newsold {
+  border-top: dashed 1px #bbb;
+  font-size: 80%;
+  text-align: justify;
+  color: #777;
+  margin: 0 25%;
+  padding: 0.5em 5px;
+}
+
+/*
+ * Report
+ */
+body.report {
+}
+
+body.report h2 {
+  text-align: center;
+  font-size: 80%;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  color: #666;
+  background: inherit;
+}
+body.report table {
+  border-top: solid 1px #ccc;
+  border-bottom: solid 1px #ccc;
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+body.report table tr td {
+  border-left: solid 1px #ccc;
+  border-right: solid 1px #ccc;
+  padding: 2px 4px;
+}
+body.report table tr th {
+  border: solid 1px #ccc;
+  border-bottom: solid 1px #999;
+  background: #ccc;
+  color: black;
+  padding: 2px 4px;
+}
+body.report table tr.even td {
+  background: #eef;
+  color: black;
+}
+body.report table tr td.number {
+  font-family: monospace;
+  text-align: right;
+}
+body.report table tr.top td {
+  font-weight: bold;
+}
+body.report .percbar {
+  height: 8px;
+  font-size: 1px; /* guh? */
+
+  border: solid 1px #999;
+  background: #fc6;
+}
+body.report .top .percbar {
+  border: solid 1px #333;
+}

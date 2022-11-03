@@ -1,0 +1,24 @@
+Version 1.0 - 2004-02-07
+------------------------
+* Original release
+
+Version 1.1 - 2004-04-02
+------------------------
+* Iterative scoring, not end-of-round (Justin will be happy)
+* Path redrawn onKeyDown, not every 100 msec
+* Better styles for scores (especially missed words list)
+* Use name cookie instead of CGI arguments
+* Better file locking, no more race conditions?
+* Rules page
+* Links to rules, about, and support all over the place
+
+Version 1.1a - 2004-04-02
+-------------------------
+* Path redrawn onKeyPress after setTimeout(25msec).  "Feels" faster.
+
+Version 1.1b - 2004-04-06
+-------------------------
+* Rewrote reports page
+* Split getboarddata() into getboard() and getboard_offset()
+* Moved around a few constants
+

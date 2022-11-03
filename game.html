@@ -1,0 +1,60 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+<head>
+  <script type="text/javascript" src="boggle.js"></script>
+  <link rel="stylesheet" media="all" href="styles.css" />
+  <title>WEBoggle</title>
+</head>
+<body>
+
+<h1><img src="boggle.png" alt="WEBoggle Logo" title="WEBoggle"></h1>
+
+<table id="body">
+  <tr id="contains_board_and_words">
+    <td id="contains_board">
+      <table id="board"></table>
+    </td>
+    <td id="contains_words">
+      <div>
+        <p id="score">Total score: 0</p>
+        <ul id="words"></ul>
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td id="contains_wordform">
+      <form id="wordform" name="wordform" onsubmit="saveword(); return false;" action="javascript:void 0">
+        <label id="playername" for="input">Guess: </label>
+        <input type="text" name="n" id="input" onKeyPress="setTimeout( redraw_path, 25 )">
+      </form>
+    </td>
+    <td id="message">
+      Initializing..
+    </td>
+  </tr>
+
+  <tr>
+    <td id="notes">
+      <p>Ad-free for pure gaming enjoyment.<br>Please <a href="https://www.paypal.com/xclick/business=log@plutor.org&item_name=WEBoggle%20Donation&no_note=1&tax=0&currency_code=USD">support</a> WEBoggle.</p>
+    </td>
+    <td id="contains_scores">
+      <table id="scores"></table>
+    </td>
+  </tr>
+</table>
+
+<p class="aboutlink">
+  <a href="about.html">About WEBoggle</a> |
+  <a href="rules.html">How to Play</a> |
+  <a href="https://www.paypal.com/xclick/business=log@plutor.org&item_name=WEBoggle%20Donation&no_note=1&tax=0&currency_code=USD">Support</a> |
+  <a href="mailto:boggle@plutor.org">Contact</a>
+</p>
+
+<script type="text/javascript">
+  setTimeout( init, 500 );
+</script>
+
+</body>
+</html>
